@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WaitlistPlus - Join the Future</title>
+    <meta name="description" content="Join our exclusive waitlist and get early access. Earn rewards through referrals.">
+    
+    <!-- Privacy-First Design: No external tracking scripts -->
+    <!-- Bring Your Own Integrations: Connect to your email service, CRM, or database -->
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Hero Section -->
+    <div class="container">
+        <header class="hero">
+            <div class="logo">
+                <h1>WaitlistPlus</h1>
+            </div>
+            <p class="tagline">Be the first to experience something extraordinary</p>
+        </header>
+
+        <!-- Main Waitlist Form -->
+        <section class="waitlist-section">
+            <div class="form-container">
+                <h2>Join the Waitlist</h2>
+                <p class="subtitle">Get exclusive early access and special perks</p>
+                
+                <form id="waitlistForm" class="waitlist-form">
+                    <div class="form-group">
+                        <input 
+                            type="text" 
+                            id="name" 
+                            name="name" 
+                            placeholder="Your Name"
+                            required
+                            aria-label="Full Name"
+                        >
+                    </div>
+                    
+                    <div class="form-group">
+                        <input 
+                            type="email" 
+                            id="email" 
+                            name="email" 
+                            placeholder="Your Email"
+                            required
+                            aria-label="Email Address"
+                        >
+                    </div>
+                    
+                    <div class="form-group">
+                        <input 
+                            type="text" 
+                            id="referralCode" 
+                            name="referralCode" 
+                            placeholder="Referral Code (Optional)"
+                            aria-label="Referral Code"
+                        >
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">
+                        <span>Join Now</span>
+                        <span class="btn-arrow">→</span>
+                    </button>
+                </form>
+                
+                <!-- Success Message (Hidden by default) -->
+                <div id="successMessage" class="success-message" style="display: none;">
+                    <h3>🎉 Welcome aboard!</h3>
+                    <p>You're on the list. Check your email for confirmation.</p>
+                    <div class="referral-box">
+                        <p class="referral-title">Share your unique link:</p>
+                        <div class="referral-link-container">
+                            <input 
+                                type="text" 
+                                id="userReferralLink" 
+                                readonly 
+                                class="referral-link"
+                                aria-label="Your Referral Link"
+                            >
+                            <button id="copyLinkBtn" class="copy-btn">Copy</button>
+                        </div>
+                        <p class="referral-info">Invite friends and move up the waitlist!</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="features">
+            <div class="feature-grid">
+                <div class="feature">
+                    <div class="feature-icon">🚀</div>
+                    <h3>Early Access</h3>
+                    <p>Be among the first to experience our launch</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">🎁</div>
+                    <h3>Exclusive Perks</h3>
+                    <p>Special bonuses for early supporters</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">👥</div>
+                    <h3>Referral Rewards</h3>
+                    <p>Climb the list faster by inviting friends</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>&copy; 2025 WaitlistPlus. Privacy-focused. No tracking.</p>
+            <p class="deploy-info">Deployed with <a href="https://vercel.com" target="_blank" rel="noopener">Vercel</a></p>
+        </footer>
+    </div>
+
+    <!-- 
+        INTEGRATION POINT:
+        Replace the script below with your own integration logic.
+        
+        Options:
+        1. Send to your own API endpoint
+        2. Use serverless functions (Vercel Functions, AWS Lambda, etc.)
+        3. Connect to email services (SendGrid, Mailchimp, ConvertKit)
+        4. Store in Airtable, Firebase, Supabase, or your database
+        
+        This demo uses localStorage for demonstration purposes only.
+        In production, replace with your backend integration.
+    -->
+    <script src="app.js"></script>
+</body>
+</html>
