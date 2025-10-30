@@ -1,0 +1,55 @@
+/* WaitlistPlus Core Styles - Accessible, Responsive, and Theming-ready */
+:root{
+  --bg:#0b0f14; --card:#121923; --muted:#7a8aa0; --text:#e6edf3; --brand:#5cd1ff; --brand-600:#19b6ff; --accent:#a5ff8a; --danger:#ff7a7a; --warn:#ffd17a; --ok:#8affc1; --border:#223142; --ring:#1f9ad6;
+  --radius:14px; --shadow:0 10px 30px rgba(0,0,0,.25);
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0; font-family: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+  background: radial-gradient(1200px 800px at 10% -10%, #0f1624, transparent), radial-gradient(1400px 900px at 110% 10%, #0b1420, transparent), var(--bg);
+  color:var(--text);
+}
+.container{max-width:960px;margin:0 auto;padding:24px}
+.header{display:flex;justify-content:space-between;align-items:center;gap:12px}
+.logo{display:flex;gap:10px;align-items:center;font-weight:700}
+.logo .dot{width:12px;height:12px;border-radius:50%;background:linear-gradient(135deg,var(--brand),var(--brand-600));box-shadow:0 0 18px var(--brand-600)}
+.card{background:linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--shadow);backdrop-filter: blur(8px)}
+.hero{margin-top:28px;padding:28px}
+.hero h1{margin:0 0 8px;font-size:28px}
+.hero p{margin:0;color:var(--muted)}
+.grid{display:grid;grid-template-columns:1fr;gap:16px;margin-top:18px}
+@media(min-width:720px){.grid{grid-template-columns:2fr 1fr}}
+.input, input, select, button, textarea{font:inherit}
+.input{display:flex;gap:10px}
+.input input{flex:1;padding:12px 14px;border-radius:12px;border:1px solid var(--border);background:rgba(7,12,18,.65);color:var(--text)}
+.input input:focus{outline:2px solid var(--ring);outline-offset:1px}
+.btn{padding:12px 16px;border-radius:12px;border:1px solid var(--border);background:linear-gradient(180deg,#142232,#0e1724);color:var(--text);cursor:pointer}
+.btn.primary{background:linear-gradient(180deg,var(--brand),var(--brand-600));color:#00131e;border-color:transparent}
+.btn[disabled], .btn:disabled{opacity:.5;cursor:not-allowed}
+.help{font-size:12px;color:var(--muted)}
+.kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:18px}
+.kpi{padding:12px;border-radius:12px;border:1px solid var(--border);background:rgba(7,12,18,.5)}
+.kpi b{font-size:18px}
+.notice{margin-top:14px;padding:12px;border-left:3px solid var(--ring);background:rgba(7,12,18,.65);border-radius:8px}
+.toast{position:fixed;right:14px;bottom:14px;padding:12px 14px;border-radius:10px;border:1px solid var(--border);background:#0f1722;box-shadow:var(--shadow);display:none}
+.toast.show{display:block}
+.table{width:100%;border-collapse:separate;border-spacing:0 8px}
+.table th{font-size:12px;color:var(--muted);font-weight:600;text-align:left}
+.table td, .table th{padding:10px;border-bottom:1px solid var(--border)}
+.badge{display:inline-flex;align-items:center;gap:6px;padding:4px 8px;background:#0f1a28;border:1px solid var(--border);border-radius:999px;font-size:12px}
+.badge .avatar{width:16px;height:16px;border-radius:50%;background:#123}
+.footer{margin:28px 0;color:var(--muted);font-size:12px}
+.hidden{display:none!important}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+/* Leaderboard specific */
+.leaderboard{margin-top:12px}
+.rank{display:flex;align-items:center;gap:10px}
+.rank .pos{width:28px;height:28px;display:inline-grid;place-items:center;border-radius:8px;background:#0f1a28;border:1px solid var(--border)}
+.progress{width:100%;height:8px;background:#0c1320;border-radius:999px;overflow:hidden}
+.progress > span{display:block;height:100%;background:linear-gradient(90deg,var(--brand),var(--accent))}
+/* Modal */
+.modal{position:fixed;inset:0;background:rgba(0,0,0,.6);display:none;align-items:center;justify-content:center;padding:20px}
+.modal .sheet{max-width:520px;width:100%;padding:18px}
+.modal.show{display:flex}
+pre.code{background:#0f1a28;border:1px solid var(--border);padding:12px;border-radius:12px;overflow:auto}
